@@ -1,0 +1,8 @@
+Started by user [8mha:////4BSDEWs7MKZVg93ElOTVdng3BZdRUfAkcNVlHVZYcM+gAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building remotely on [8mha:////4OfFsA5137XjjeaJ1Eq7SVODmlT2cLts+0zMmSJBbGB4AAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZB/eT83ILSktQifZf85OzUIkMANisTM8YAAAA=[0mDocker1 in workspace /Users/mayank/Documents/jenkins_slave/workspace/PlayDocker
+[PlayDocker] $ /bin/sh -xe /var/folders/98/xt2gl9112dzdyf40b24mt44c0000gn/T/jenkins6239944124590708580.sh
++ docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+8437a4df55ca        jenkins/jenkins:lts   "/sbin/tini -- /usr/…"   9 hours ago         Up 9 hours          0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   suspicious_gates
+Finished: SUCCESS
