@@ -1,13 +1,11 @@
 pipeline {
+    agent any
     stages {
         stage('Build Jar') {
-            agent {
                 docker {
-		                reuseNode true
                     image 'maven:3-alpine'
                     args '-v $HOME/.m2:/root/.m2'
                 }
-            }
             steps {
                 sh 'mvn clean package -DskipTests'
             }
