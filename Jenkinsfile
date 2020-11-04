@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Build Jar') {
             agent {
@@ -14,17 +14,20 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                sh "docker build -t='888777666/selenium-docker' ."
+                script {
+                	app = docker.build("888777666/selenium-docker")
+                }
             }
         }
         stage('Push Image') {
-                    steps {
-        			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                            //sh
-        			        sh "docker login --username=${user} --password=${pass}"
-        			        sh "docker push 8888777666/selenium-docker:latest"
-        			      }
-                 }
-               }
+            steps {
+                script {
+			        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+			        	app.push("${BUILD_NUMBER}")
+			            app.push("latest")
+			        }
+                }
             }
         }
+    }
+}
